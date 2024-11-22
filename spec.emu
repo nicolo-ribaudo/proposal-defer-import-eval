@@ -224,6 +224,7 @@ contributors: Nicolò Ribaudo
             1. <ins>Perform ? EnsureDeferredNamespaceEvaluation(_O_).</ins>
           1. Let _exports_ be _O_.[[Exports]].
           1. <ins>If _O_.[[Deferred]] is *true*, and _exports_ contains *"then"*, then</ins>
+            1. <ins>Set _exports_ to a copy of _exports_.</ins>
             1. <ins>Remove *"then"* from _exports_.</ins>
           1. Let _symbolKeys_ be OrdinaryOwnPropertyKeys(_O_).
           1. Return the list-concatenation of _exports_ and _symbolKeys_.
